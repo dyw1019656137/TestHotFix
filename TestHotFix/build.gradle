@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        maven {
+            url "http://jcenter.bintray.com"
+        }
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.meituan.robust:gradle-plugin:0.4.90'
+        classpath 'com.meituan.robust:auto-patch-plugin:0.4.90'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven {
+            url "http://jcenter.bintray.com"
+        }
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
